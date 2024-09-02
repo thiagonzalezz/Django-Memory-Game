@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<script>
+    // Redireccionar después de 5 segundos (5000 milisegundos)
+    setTimeout(function() {
+        window.location.href = "{% url 'third' %}";
+    }, 1000);
+</script>
+
+<div class="text-center">
+    <h1>These are the numbers that you have to remember</h1>
+    <p>Number 1: {{ list.number1 }}</p>
+    <p>Number 2: {{ list.number2 }}</p>
+    <p>Number 3: {{ list.number3 }}</p>
+</div>
+{% endblock %}
+    
+
